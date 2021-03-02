@@ -1,0 +1,25 @@
+var pwidget_config = {defaults:{afterShare:false}};
+
+function loadShareImage(){
+	window.pwidget_api.post_images('#fancybox-content img', {
+		overlay: false,
+		label:false,
+		position: 'center',
+		offset:[0,-120],
+		post_widget: {
+			size: 'large',
+			buttons: ['pinterest']
+		}
+	});
+	jQuery('#fancybox-right').on('click', function(){
+		setTimeout(function(){loadShareImage();}, 500);
+	});
+	jQuery('#fancybox-left').on('click', function(){
+		setTimeout(function(){loadShareImage();}, 500);
+	});
+}
+jQuery(window).on('load', function(){
+	jQuery('.ngg-gallery-thumbnail img').on('click',function(){
+		setTimeout(function(){loadShareImage();}, 500);
+	});
+});

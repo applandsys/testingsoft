@@ -1,0 +1,104 @@
+body.light {
+	--main-bg-color:			#fff;
+	--main-bg-grad:				none;
+	--main-color:				#000;
+	--secondary-color:			rgb(0,0,0,0.5);
+	--tertiary-color:			rgb(0,0,0,0.25);
+	--link-color:				#0051c2;
+	--link-color-highlight:		#0051c2;
+	--border-color: 			rgba(0,81,194,0.3);
+	--border-color-highlight: 	rgba(0,81,194,0.6);
+	--border-secondary-color: 	rgba(0,0,0,0.1);
+	--inset-color:				#eee;
+	--inset-grad:				none;
+}
+.light div#wrapper {
+	background-image: url('images/foot_bg.gif');
+	background-repeat: repeat-x;
+	background-position: center bottom;
+}
+.light div#title {
+	background-color: #949eac;
+	background-image: url('images/header2.jpg');
+}
+.light div#footer {
+	background: transparent url('images/footer2.jpg') no-repeat left bottom;
+	text-shadow: none;
+}
+.light div#footer div.foot-col h3,
+.light div#footer a,
+.light div#footer p.legal {
+	color: #fff;
+}
+.light div#range-title div {
+	-webkit-filter: invert(100%);
+	   -moz-filter: invert(100%);
+	        filter: invert(100%);
+}
+.light div.cd_display {
+	background-image: url('../../plugins/mission-tracking/images/digital-numbers/bg2.png');
+}
+.light div.cd_colon {
+	background: url('../../plugins/mission-tracking/images/digital-numbers/sym2.png') no-repeat -16px 0;
+}
+.light div#cd_minus {
+    background: url('../../plugins/mission-tracking/images/digital-numbers/sym2.png') no-repeat;
+}
+.light div.cd_num {
+	background-image: url('../../plugins/mission-tracking/images/digital-numbers/digital2.png');
+}
+.light div.cd_blink {
+	background-image: url('../../plugins/mission-tracking/images/digital-numbers/sym2.gif');
+}
+
+.light .sfi-container .toggle-label::before {
+	color: #000;
+}
+
+.light table.launchcalendar,
+.light table.launchcalendar *,
+.light table.calendar th,
+.light table.calendar td {
+	border-color: #c2cee1;
+}
+.light div#mt_header li.calendar img,
+.light div.map > div {
+	-webkit-filter: invert(100%);
+	   -moz-filter: invert(100%);
+	        filter: invert(100%);
+}
+.light div#mt_header li.active,
+.light div#mt_header li:hover,
+.light table.launchcalendar td.description ul li,
+.light table.calendar th a:hover,
+.light td.calendar-day:hover,
+.light div.day-number, .today {
+	background-color: #eee;
+	background-color: rgba(0,0,0,0.1);
+}
+.light div#mt_header li.active,
+.light div#mt_header li:hover {
+	border: 1px dotted #333;
+	border: 1px dotted rgba(0,0,0,0.5);
+}
+.light table.launchcalendar > tbody > tr > th:not(:first-child) {
+	background: #bfbfbf;
+	background: linear-gradient(to right,rgba(0,0,0,0.25),transparent) no-repeat;
+}
+.light table.launchcalendar > tbody > tr > th {
+	text-shadow: none;
+}
+.light table.launchcalendar > tbody > tr > th span.net ~ span {
+	color: #fff;
+}
+.light table.launchcalendar td.launchdetails table th {
+	color: #555;
+	color: rgba(0,0,0,0.75);
+}
+.light span.utc {
+	opacity: 0.75;
+}
+.light table.launchcalendar td.description {
+	color: #333;
+	color: rgba(0,0,0,0.75);
+}

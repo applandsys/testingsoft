@@ -1,0 +1,211 @@
+/*
+Plugin Name: Mission Tracking
+Version: 1.4
+*/
+
+div.cd_container {
+	margin: 8px 0;
+	/* total width = 336px */
+	width: 328px;
+	padding: 4px 0;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 8pt;
+	text-transform: uppercase;
+}
+div.cd_container a {
+    z-index: 99;
+    position: relative;
+}
+div.cd_container:not(.condensed) > div {
+	margin-top: -10px;
+}
+div.cd_container > div:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+div.cd_container h1 {
+	display: inline-block;
+	position: relative;
+	top: -1em;
+	width: 100%;
+	height: auto !important;
+	margin: 0 auto;
+	padding-top: 1px;
+	text-align: center;
+	font-size: 10pt;
+	letter-spacing: 0.5em;
+	text-indent: 0.5em;
+	font-weight: normal;
+}
+div.cd_container h1:after {
+	display: none;
+}
+div.cd_container h1 span:before,
+div.cd_container h1 span:after {
+    display: inline-block;
+    content: " ";
+    background: var(--border-color);
+    height: 2px;
+    width: calc(50% - 6.5em);
+    position: absolute;
+    top: 9px;
+}
+div.cd_container h1 span:before {
+    left: 0;
+}
+div.cd_container h1 span:after {
+    right: 0;
+}
+div.cd_img {
+	float: left;
+	width: 60px;
+	margin: 0;
+	text-align: center;
+}
+div.cd_img img {
+	opacity: 0.75;
+	filter: alpha(opacity=75);
+}
+div.cd_mobilelink {
+	display: none;
+}
+div.cd_info {
+	float: right;
+	width: 260px;
+	margin: 0 auto 8px auto;
+	text-align: left;
+}
+div.cd_container.condensed div.cd_info {
+	margin-top: -12px;
+}
+div.cd_info table {
+	margin-left: 4px;
+}
+div.cd_info th {
+	opacity: 0.5;
+	padding-right: 8px;
+	text-align: right;
+}
+div.cd_info td {
+	padding: 0;
+}
+div.cd_active {
+	display: none;
+	width: 260px;
+	height: 34px;
+	margin: 0 auto;
+	padding-top: 8px;
+}
+div.cd_num {
+	background-image: url('images/digital-numbers/digital.png');
+}
+div.cd_blink {
+	background-image: url('images/digital-numbers/sym.gif');
+}
+div.cd_hold {
+	display: none;
+	width: 212px;
+	height: 21px;
+	text-align: center;
+}
+div.cd_display {
+	display: inline-block;
+	height: 34px;
+	font-family: Arial;
+	font-size: 16px;
+	text-align: center;
+	background: url('images/digital-numbers/bg.png') repeat-x;
+}
+div.cd_display > div {
+	display: inline-block;
+	width: 16px;
+	height: 21px;
+}
+div.cd_display > p {
+	margin: 0;
+	font-size: 10px;
+}
+div#cd_minus, div#cd_count {
+	display: inline-block;
+	width: 16px;
+	height: 21px;
+}
+div#cd_count {
+	background: url('images/digital-numbers/digital.png') no-repeat -160px 0;
+}
+div#cd_minus {
+	background: url('images/digital-numbers/sym.png') no-repeat;
+}
+div.cd_colon {
+	display: inline-block;
+	width: 10px;
+	height: 34px;
+	font-size: 14px;
+	background: url('images/digital-numbers/sym.png') no-repeat -16px 0;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	div#cd_minus {
+		background: url('images/digital-numbers/sym.gif') no-repeat;
+	}
+	div.cd_colon {
+		background: url('images/digital-numbers/sym.gif') no-repeat -16px 0;
+	}
+}
+
+@media only screen and (-webkit-device-pixel-ratio:3),
+	only screen and (min-resolution: 3dppx),
+	only screen and (-webkit-device-pixel-ratio:2) and (min-device-width : 320px) and (max-device-width : 568px),
+	only screen and (max-width: 800px) and not (-webkit-device-pixel-ratio:2),
+	only screen and (min-resolution: 1.5dppx) and not (-webkit-device-pixel-ratio:2),
+	only screen and (max-width: 800px)	{
+	div.cd_container {
+		width: calc(100% - 2px);
+		margin: 0 0 8px 0;
+		padding: 0;
+		background: #0d192c;
+	}
+	div.cd_container h1,
+	div.cd_container table,
+	div.cd_container div.cd_img	{
+		display: none;
+	}
+	div.cd_container h1 {
+		display: none;
+	}
+	div.cd_container div.cd_mobilelink {
+		display: block;
+		font-size: 10pt;
+		font-weight: bold;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		text-align: center;
+	}
+	div.cd_container div.cd_mobilelink span {
+		padding: 0 0.5em;
+		background-color: var(--main-bg-color);
+	}
+	div.cd_container div.cd_info {
+		float: none;
+		width: 100%;
+		margin: 0 0 8px 0;
+		padding-top: 2px;
+	}
+	div.cd_container.condensed div.cd_info {
+		margin: 0 0 4px 0;
+	}
+	div.cd_container div.cd_info div.cd_active {
+		width: 100%;
+		padding-top: 0;
+		text-align: center;
+	}
+}
+
+div.cd_container a {
+	-webkit-transition: color 0.25s;
+	   -moz-transition: color 0.25s;
+		-ms-transition: color 0.25s;
+		 -o-transition: color 0.25s;
+			transition: color 0.25s;
+}
